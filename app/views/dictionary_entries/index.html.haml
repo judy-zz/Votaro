@@ -1,7 +1,7 @@
 %h1 Votaro
 
 %table
-  - EnglishWord.all.each do |word|
+  - @english_words.all.each do |word|
     %tr
       %td= word
       %td= word.esperanto_words

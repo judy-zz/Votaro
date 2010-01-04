@@ -1,6 +1,6 @@
 class DictionaryEntriesController < ApplicationController
   def index
-    @EnglishWords = EnglishWord.find(:all)
+    @english_words = EnglishWord.find(:all)
   end
 
 end
