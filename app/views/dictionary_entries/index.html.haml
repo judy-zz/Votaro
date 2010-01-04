@@ -1,9 +1,9 @@
 %h1 Votaro
 
 %table
-  - Definition.all.each do |definition|
+  - EnglishWord.all.each do |word|
     %tr
-      %td= definition.term
-      %td= definition.definition
+      %td= word
+      %td= word.esperanto_words
     
     
