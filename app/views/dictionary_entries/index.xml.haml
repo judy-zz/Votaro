@@ -1,0 +1,35 @@
+!!! XML
+%d:dictionary{ "xmlns:d" => "http://www.apple.com/DTDs/DictionaryService-1.0.rng", :xmlns => "http://www.w3.org/1999/xhtml" }
+  - @english_words.each do |word|
+    = render :partial => "shared/word", :locals => {:word => word}
+  %d:entry#front_back_matter{ "d:title" => "Front/Back Matter" }
+    %h1
+      %b
+        Pomo Votaro
+    %h2
+      Front/Back Matter
+    %div
+      This is a front matter page of the sample dictionary.
+      %br
+      %br
+    %div
+      %b
+        To see
+      this page,
+      %ol
+        %li
+          Open "Go" menu.
+        %li
+          Choose "Front/Back Matter" menu item.
+          If it has sub-menu items, choose one of them.
+    %div
+      %b
+        To prepare
+      the menu item, do the followings.
+      %ol
+        %li
+          Prepare this page source as an entry.
+        %li
+          Add "DCSDictionaryFrontMatterReferenceID" key and its value to the plist of the dictionary.
+          The value should be the string of this page entry id.
+    %br

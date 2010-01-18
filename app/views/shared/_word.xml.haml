@@ -1,0 +1,12 @@
+%d:entry{ :id => word, "d:title" => word }
+  %d:index{ "d:value" => word }
+  %div
+    %h1
+      = word
+  %div{ "d:parental-control" => "1", "d:priority" => "2" }
+    %h3
+      ESPERANTO
+    - word.esperanto_words.each do |eo_word|
+      %div{:id => eo_word}
+        %b
+          = eo_word
